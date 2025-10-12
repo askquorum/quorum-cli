@@ -1,0 +1,34 @@
+{
+  "openrouter_api_key": "sk-or-v1-your-api-key-here",
+  "searxng_url": "https://search.example.com",
+  "searxng_api_key": "your-searxng-api-key-here-or-remove-if-not-needed",
+  "debate_rules": {
+    "max_total_tokens": 50000,
+    "max_tokens_per_turn": 1000,
+    "rounds": 3,
+    "enable_search": true,
+    "search_limit_per_turn": 2
+  },
+  "topic": "Should remote work be the default for software companies?",
+  "context": "Consider productivity, company culture, employee satisfaction, and business costs.",
+  "participants": [
+    {
+      "name": "Remote Advocate",
+      "model": "anthropic/claude-3-5-sonnet",
+      "system_prompt": "You advocate for remote work, emphasizing flexibility, work-life balance, and productivity benefits.",
+      "temperature": 0.7
+    },
+    {
+      "name": "Office Supporter",
+      "model": "openai/gpt-4-turbo",
+      "system_prompt": "You support office-based work, highlighting collaboration, culture, and innovation that comes from in-person interaction.",
+      "temperature": 0.7
+    },
+    {
+      "name": "Hybrid Pragmatist",
+      "model": "google/gemini-pro-1.5",
+      "system_prompt": "You propose balanced hybrid approaches that combine benefits of both remote and office work.",
+      "temperature": 0.6
+    }
+  ]
+}
